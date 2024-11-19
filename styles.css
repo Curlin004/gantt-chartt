@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #005b96;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00487c;
+}
+
+.gantt-chart {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+}
+
+.gantt-header {
+    display: flex;
+    background-color: #005b96;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.gantt-dates {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.gantt-dates div {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    border-right: 1px solid #ccc;
+}
+
+.gantt-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gantt-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.task-name {
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #ccc;
+    border-right: 1px solid #aaa;
+}
+
+.task-name[contenteditable="true"] {
+    outline: 1px solid #005b96;
+}
+
+.gantt-timeline {
+    flex: 3;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #eaeaea;
+}
+
+.bar {
+    position: absolute;
+    height: 20px;
+    background-color: #ff6699;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 4px;
+    cursor: grab;
+    font-size: 12px;
+}
+
+.bar:focus {
+    outline: 2px solid #00487c;
+    cursor: grabbing;
+}
+
+.bar:hover {
+    background-color: #e64c7d;
+}
+
+.special-bar {
+    background-color: #005b96;
+    border: 2px solid red;
+    color: white;
+}
